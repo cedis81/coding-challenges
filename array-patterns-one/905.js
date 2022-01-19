@@ -13,7 +13,7 @@
     // base case = when left < right
     while (left < right) {// if nums[left] is odd AND nums[right] is even, swap and increment/decrement
         if (nums[left] % 2 !== 0 && nums[right] % 2 === 0) {
-            [nums[left], nums[right]] = [nums[right], nums[left]]
+            [nums[left], nums[right]] = [nums[right], nums[left]];
             left++;
             right--;
         } else if (nums[left] % 2 === 0) {// if nums[left] is even, increment left
@@ -23,23 +23,23 @@
         }
     }
     //return array of integers. array will be same size
-    return nums
+    return nums;
 };
 
 // with extra space
 var sortArrayByParity2 = function(nums) {
-    let l = nums[0]
-    let r = nums.length-1
+    let l = nums[0];
+    let r = nums.length-1;
     
     //traverse array and check elements for even and odd values
-    let evenArray = []
-    let oddArray = []
+    let evenArray = [];
+    let oddArray = [];
     
     for (let i = 0; i < nums.length; i++) {
         if (nums[i]%2===0) {
-            evenArray.push(nums[i])
+            evenArray.push(nums[i]);
         } else {
-            oddArray.push(nums[i])
+            oddArray.push(nums[i]);
         }
     }
     return ([...evenArray,...oddArray])

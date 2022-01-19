@@ -11,15 +11,15 @@
     // loop to check sum
     // base case - while rightPointer is greater than leftPointer
     while (leftPointer < rightPointer) {
-        const sum = numbers[leftPointer] + numbers[rightPointer]
+        const sum = numbers[leftPointer] + numbers[rightPointer];
         
         if (sum > target) {//sum > target? right decrement    
-            rightPointer--
+            rightPointer--;
         } else if (sum < target) {//sum < target? left increment
-            leftPointer++
+            leftPointer++;
         } else {//sum === target? return
         // output is an array of length 2 [index1 + 1, index2 + 1]. Only one solution.
-            return [leftPointer + 1, rightPointer + 1]
+            return [leftPointer + 1, rightPointer + 1];
         }
     }
 };
